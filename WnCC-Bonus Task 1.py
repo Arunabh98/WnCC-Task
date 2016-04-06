@@ -60,10 +60,6 @@ def getDistance():
             elif jsonResponse["status"] == 'INVALID_REQUEST':
                 # Input is Invalid
                 print jsonResponse["error_message"], placeInput + ' is invalid.'
-            elif jsonResponse["status"] == 'ZERO_RESULTS':
-                # Not accessible by road
-                placeDetails.append((placeInput, 10000000 + count))
-                count += 1
             else:
                 latIITBombay = jsonResponse["routes"][0]["legs"][0]["end_location"]["lat"]
                 lngIITBombay = jsonResponse["routes"][0]["legs"][0]["end_location"]["lng"]
