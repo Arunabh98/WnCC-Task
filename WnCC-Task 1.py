@@ -46,7 +46,7 @@ def quickSort(A):
 def getDistance():
     count = 0
     # Reads from input.txt
-    f = open('C:\Users\Arunabh\Desktop\WnCC\Code\input.txt', 'r+')
+    f = open('input.txt', 'r+')
     for placeInput in f:
         place = placeInput.replace(' ', '+')
         try:
@@ -82,3 +82,4 @@ for place in SortedPlaceDetails:
         print 'Not accesible by road - ', place[0]
     else:
         print place[1], '     ', place[0]
+raw_input()
